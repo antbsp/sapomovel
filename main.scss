@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: "Outfit", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+body, html {
+    background-color: #040D12;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    color: white;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    width: 30vw;
+    flex-direction: column;
+    grid-gap: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.checkbox-group {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 50px;
+}
+
+input[type=radio] {
+    display: none;
+    &:checked {
+        + .checkbox-label {
+            background-color: white;
+            color: #040D12;
+        }
+    }
+}
+
+.checkbox-label {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 3px solid white;
+    transition: all .2s ease;
+    cursor: pointer;
+    &-last {
+        border-left: none;
+        border-radius: 0 10px 10px 0;
+    }
+    &-first {
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+}
+
+.label {
+    color: white;
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.input {
+    height: 50px;
+    padding: 0 20px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    &::placeholder {
+        opacity: 1;
+    }
+}
+
+.submit {
+    height: 50px;
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 3px solid white;
+    background-color: white;
+    color: #040D12;
+    cursor: pointer;
+}
+
+.sapo {
+    width: 70px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        width: calc(100% - 60px);
+    }
+    .main {
+        align-items: flex-start;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    // Desktop
+}

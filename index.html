@@ -1,1 +1,55 @@
-<p>Calculadora de gasto com combustível do Sapomóvel®</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Sapomóvel®</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+        <link rel="manifest" href="favicons/site.webmanifest">
+        <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#040D12">
+        <meta name="theme-color" content="#040D12">
+    </head>
+    <body>
+        <div class="main">
+            <div class="container">
+                <img src="sapo.png" alt="Sapo" class="sapo">
+                <h1 class="title">Calculadora de combustível do Sapomóvel®</h1>
+                <form class="form">
+                    <div class="field-group">
+                        <span class="label">Tipo de trajeto</span>
+                        <div class="checkbox-group">
+                            <input type="radio" id="trajeto-urbano" name="trajeto" value="ubarno" checked required>
+                            <label for="trajeto-urbano" class="checkbox-label checkbox-label-first">Urbano</label>
+                            <input type="radio" id="trajeto-rodoviario" name="trajeto" value="rodoviario">
+                            <label for="trajeto-rodoviario" class="checkbox-label checkbox-label-last">Rodoviário</label>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <span class="label">Combustível</span>
+                        <div class="checkbox-group">
+                            <input type="radio" id="combustivel-gasolina" name="combustivel" value="gasolina" checked required>
+                            <label for="combustivel-gasolina" class="checkbox-label checkbox-label-first">Gasolina</label>
+                            <input type="radio" id="combustivel-etanol" name="combustivel" value="etanol">
+                            <label for="combustivel-etanol" class="checkbox-label checkbox-label-last">Etanol</label>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <span class="label">Distância (em km)</span>
+                        <input type="number" placeholder="Ex: 50km" name="distancia" step=".01" class="input" min="0" inputmode="decimal" required>
+                    </div>
+                    <div class="field-group">
+                        <span class="label">Valor do combustível (por litro)</span>
+                        <input type="number" placeholder="Ex: 5,99" name="valor" step=".01" class="input" min="0" inputmode="decimal" required>
+                    </div>
+                    <button class="submit" type="submit">Calcular</button>
+                </form>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
